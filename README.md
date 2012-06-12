@@ -32,7 +32,7 @@ Credits
 -------
 
 The code was copied directly from the Android 4.0.3 (API 15) source code, then slightly tweaked by myself (BoD@JRAF.org) to make
-it run on 2.2+.  The few modifications I made are documented on the code (look for 'XXX' comments).
+it run on 2.2+.  The few modifications I made are documented in the code (look for 'XXX' comments).
 
 Licence
 -------
