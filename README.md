@@ -1,5 +1,5 @@
-Android Switch Backport
-=======================
+Android Switch Widget Backport
+==============================
 
 A backport of the Switch widget (http://developer.android.com/reference/android/widget/Switch.html)
 that was introduced on Android 4.
@@ -19,14 +19,14 @@ to be one of the two possible themes: either `Widget.Holo.CompoundButton.Switch`
 
 The simplest way to do that is to create a `themes.xml` file in your project's `res/values` folder with this contents:
 
-	<?xml version="1.0" encoding="utf-8"?>
-	<resources>
+        <?xml version="1.0" encoding="utf-8"?>
+        <resources>
 
-	    <style name="Theme" parent="@android:Theme">
-		<item name="switchStyle">@style/Widget.Holo.CompoundButton.Switch</item>
-	    </style>
+            <style name="Theme" parent="@android:Theme">
+                <item name="switchStyle">@style/Widget.Holo.CompoundButton.Switch</item>
+            </style>
 
-	</resources>
+        </resources>
 
 Credits
 -------
@@ -41,7 +41,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-     http://www.apache.org/licenses/LICENSE-2.0
+http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
