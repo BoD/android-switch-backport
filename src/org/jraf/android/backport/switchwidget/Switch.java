@@ -73,6 +73,7 @@ public class Switch extends CompoundButton {
     private final int mSwitchPadding;
     private CharSequence mTextOn;
     private CharSequence mTextOff;
+    private int mAddedHeight;
 
     private int mTouchMode;
     private final int mTouchSlop;
@@ -148,6 +149,7 @@ public class Switch extends CompoundButton {
         mThumbTextPadding = a.getDimensionPixelSize(R.styleable.Switch_thumbTextPadding, 0);
         mSwitchMinWidth = a.getDimensionPixelSize(R.styleable.Switch_switchMinWidth, 0);
         mSwitchPadding = a.getDimensionPixelSize(R.styleable.Switch_switchPadding, 0);
+        mAddedHeight = a.getDimensionPixelSize(R.styleable.Switch_switchAddedHeight, 0);
 
         final int appearance = a.getResourceId(R.styleable.Switch_switchTextAppearance, 0);
         if (appearance != 0) {
@@ -312,7 +314,7 @@ public class Switch extends CompoundButton {
         mTrackDrawable.getPadding(mTempRect);
         final int maxTextWidth = Math.max(mOnLayout.getWidth(), mOffLayout.getWidth());
         final int switchWidth = Math.max(mSwitchMinWidth, maxTextWidth * 2 + mThumbTextPadding * 4 + mTempRect.left + mTempRect.right);
-        final int switchHeight = mTrackDrawable.getIntrinsicHeight();
+        final int switchHeight = mTrackDrawable.getIntrinsicHeight()+mAddedHeight;
 
         mThumbWidth = maxTextWidth + mThumbTextPadding * 2;
 

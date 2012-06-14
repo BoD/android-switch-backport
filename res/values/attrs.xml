@@ -43,6 +43,8 @@
         <attr name="switchMinWidth" format="dimension" />
         <!-- Minimum space between the switch and caption text -->
         <attr name="switchPadding" format="dimension" />
+        <!-- Amount of pixel to add to the height -->
+        <attr name="switchAddedHeight" format="dimension" />
     </declare-styleable>
     <declare-styleable name="Theme">
         <attr name="switchStyle" format="reference" />

@@ -34,6 +34,7 @@
         <item name="thumbTextPadding">12dip</item>
         <item name="switchMinWidth">96dip</item>
         <item name="switchPadding">16dip</item>
+        <item name="switchAddedHeight">0dip</item>
     </style>
 
     <style name="Widget.Holo.Light.CompoundButton.Switch" parent="android:Widget.CompoundButton">
