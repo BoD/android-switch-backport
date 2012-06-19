@@ -4,7 +4,7 @@ Android Switch Widget Backport
 A backport of the Switch widget (http://developer.android.com/reference/android/widget/Switch.html)
 that was introduced on Android 4.
 
-This port works on Android 2.2+.
+This port works on Android 2.1+.
 
 How to use
 ----------
@@ -32,7 +32,7 @@ Credits
 -------
 
 The code was copied directly from the Android 4.0.3 (API 15) source code, then slightly tweaked by myself (BoD@JRAF.org) to make
-it run on 2.2+.  The few modifications I made are documented in the code (look for 'XXX' comments).
+it run on 2.1+.  The few modifications I made are documented in the code (look for 'XXX' comments).
 
 Licence
 -------
