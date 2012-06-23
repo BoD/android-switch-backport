@@ -28,6 +28,12 @@ The simplest way to do that is to create a `themes.xml` file in your project's `
 
         </resources>
 
+Then in your layout xml files you can use the widget like this:
+
+        <org.jraf.android.backport.switchwidget.Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
 Credits
 -------
 
