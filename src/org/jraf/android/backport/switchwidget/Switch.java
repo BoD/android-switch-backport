@@ -137,7 +137,7 @@ public class Switch extends CompoundButton {
         mTextPaint = new TextPaint(Paint.ANTI_ALIAS_FLAG);
         final Resources res = getResources();
         mTextPaint.density = res.getDisplayMetrics().density;
-        // XXX Was on the Android source, but had to comment it out (doesn't exist in 2.2). -- BoD
+        // XXX Was on the Android source, but had to comment it out (doesn't exist in 2.1). -- BoD
         // mTextPaint.setCompatibilityScaling(res.getCompatibilityInfo().applicationScale);
 
         final TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.Switch, defStyle, 0);
@@ -357,7 +357,7 @@ public class Switch extends CompoundButton {
         }
     }
 
-    // XXX Was on the Android source, but had to comment it out (doesn't exist in 2.2). -- BoD
+    // XXX Was on the Android source, but had to comment it out (doesn't exist in 2.1). -- BoD
     // @Override
     // public void onPopulateAccessibilityEvent(AccessibilityEvent event) {
     //     super.onPopulateAccessibilityEvent(event);
@@ -395,7 +395,9 @@ public class Switch extends CompoundButton {
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
         mVelocityTracker.addMovement(ev);
-        final int action = ev.getActionMasked();
+        // final int action = ev.getActionMasked();
+        // XXX Replaced by getAction() (getActionMasked() doesn't exist in 2.1). -- BoD
+        final int action = ev.getAction();
         switch (action) {
             case MotionEvent.ACTION_DOWN: {
                 final float x = ev.getX();
@@ -632,7 +634,7 @@ public class Switch extends CompoundButton {
         return super.verifyDrawable(who) || who == mThumbDrawable || who == mTrackDrawable;
     }
 
-    // XXX Was on the Android source, but had to comment it out (doesn't exist in 2.2). -- BoD
+    // XXX Was on the Android source, but had to comment it out (doesn't exist in 2.1). -- BoD
     // @Override
     // public void jumpDrawablesToCurrentState() {
     //     super.jumpDrawablesToCurrentState();
