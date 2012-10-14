@@ -33,6 +33,36 @@ Then in your layout xml files you can use the widget like this:
         <org.jraf.android.backport.switchwidget.Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+            
+SwitchPreference
+----------------
+
+Add switchPreferenceStyle to your 'themes.xml'
+
+        <?xml version="1.0" encoding="utf-8"?>
+        <resources>
+
+            <style name="Theme" parent="@android:Theme">
+                <item name="switchStyle">@style/Widget.Holo.CompoundButton.Switch</item>
+                <item name="switchPreferenceStyle">@style/Preference.SwitchPreference</item>
+            </style>
+
+        </resources>
+
+Then in your preference xml file:
+
+        <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:switchpref="http://schemas.android.com/apk/res-auto" >
+
+            <org.jraf.android.backport.switchwidget.SwitchPreference
+                android:key="testKey"
+                android:title="Switch Preference Test"
+                switchpref:switchTextOff="@string/off"
+                switchpref:switchTextOn="@string/on"
+                switchpref:summaryOff="@string/summary_off"
+                switchpref:summaryOn="@string/summary_on" />
+      
+        </PreferenceScreen>
 
 Credits
 -------
