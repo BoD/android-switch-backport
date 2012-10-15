@@ -9,6 +9,8 @@ This port works on Android 2.1+.
 How to use
 ----------
 
+### Switch
+
 This is an Android library project, you have to add it as a dependency to your project (please
 see http://developer.android.com/guide/developing/projects/projects-eclipse.html#ReferencingLibraryProject to
 know how to do that.)
@@ -33,9 +35,8 @@ Then in your layout xml files you can use the widget like this:
         <org.jraf.android.backport.switchwidget.Switch
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-            
-SwitchPreference
-----------------
+
+### SwitchPreference
 
 Add switchPreferenceStyle to your 'themes.xml'
 
