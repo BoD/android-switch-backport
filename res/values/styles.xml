@@ -47,4 +47,11 @@
         <item name="switchPadding">16dip</item>
     </style>
 
+    <style name="Preference.SwitchPreference" parent="">
+        <item name="android:layout">@layout/preference</item>
+        <item name="android:widgetLayout">@layout/preference_widget_switch</item>
+        <item name="switchTextOn">@string/switch_on</item>
+        <item name="switchTextOff">@string/switch_off</item>
+    </style>
+
 </resources>
