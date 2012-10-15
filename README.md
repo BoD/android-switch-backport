@@ -57,7 +57,7 @@ Then in your preference xml file:
 
             <org.jraf.android.backport.switchwidget.SwitchPreference
                 android:key="testKey"
-                android:title="Switch Preference Test"
+                android:title="SwitchPreference Test"
                 switchpref:switchTextOff="@string/off"
                 switchpref:switchTextOn="@string/on"
                 switchpref:summaryOff="@string/summary_off"
