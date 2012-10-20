@@ -70,6 +70,8 @@ Credits
 
 The code was copied directly from the Android 4.0.3 (API 15) source code, then slightly tweaked by myself (BoD@JRAF.org) to make
 it run on 2.1+.  The few modifications I made are documented in the code (look for 'XXX' comments).
+The SwitchPreference part was added later by Intrications (intrications.com / github.com/intrications), also by taking code
+from Android and tweaking it a bit.
 
 Licence
 -------
