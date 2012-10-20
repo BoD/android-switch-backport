@@ -3,6 +3,7 @@ Notice for all the files in this folder.
 
 
    Copyright 2012 Benoit 'BoD' Lubek (BoD@JRAF.org).  All Rights Reserved.
+   Copyright (C) 2012 Intrications (intrications.com)
    Copyright (c) 2005-2008, The Android Open Source Project
 
 
