@@ -29,8 +29,22 @@ The simplest way to do that is to create a `themes.xml` file in your project's `
             </style>
 
         </resources>
+        
+And use it in your Application or Activity by updating your `AndroidManifest.xml` file:
 
-Then in your layout xml files you can use the widget like this:
+        (...)
+        <application
+            android:theme="@style/Theme" 
+        (...)
+
+or
+
+        (...)
+        <activity
+            android:theme="@style/Theme" 
+        (...)
+
+Then in your layout xml files you use the widget like this:
 
         <org.jraf.android.backport.switchwidget.Switch
             android:layout_width="wrap_content"
