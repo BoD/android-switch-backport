@@ -21,8 +21,10 @@
          type in the "widget_frame" layout.
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
+    android:baselineAligned="false"
     android:gravity="center_vertical"
     android:minHeight="?android:attr/listPreferredItemHeight"
     android:paddingLeft="@dimen/preference_item_padding_side"
@@ -41,11 +43,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:minWidth="48dp"
-            android:paddingRight="@dimen/preference_item_padding_inner" />
+            android:paddingRight="@dimen/preference_item_padding_inner"
+            tools:ignore="ContentDescription" />
     </LinearLayout>
 
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:paddingBottom="6dip"
