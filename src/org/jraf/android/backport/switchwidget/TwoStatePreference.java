@@ -34,8 +34,8 @@ import android.os.Parcelable;
 import android.preference.Preference;
 import android.util.AttributeSet;
 import android.view.View;
-import android.view.accessibility.AccessibilityEvent;
-import android.view.accessibility.AccessibilityManager;
+//import android.view.accessibility.AccessibilityEvent;
+//import android.view.accessibility.AccessibilityManager;
 import android.widget.TextView;
 
 /**
@@ -48,7 +48,7 @@ public abstract class TwoStatePreference extends Preference {
     private CharSequence mSummaryOn;
     private CharSequence mSummaryOff;
     boolean mChecked;
-    private boolean mSendClickAccessibilityEvent;
+//    private boolean mSendClickAccessibilityEvent;
     private boolean mDisableDependentsState;
 
 
@@ -70,7 +70,7 @@ public abstract class TwoStatePreference extends Preference {
 
         boolean newValue = !isChecked();
 
-        mSendClickAccessibilityEvent = true;
+//        mSendClickAccessibilityEvent = true;
 
         if (!callChangeListener(newValue)) {
             return;
@@ -291,6 +291,7 @@ public abstract class TwoStatePreference extends Preference {
             super(superState);
         }
 
+        @SuppressWarnings("hiding")
         public static final Parcelable.Creator<SavedState> CREATOR =
                 new Parcelable.Creator<SavedState>() {
             public SavedState createFromParcel(Parcel in) {

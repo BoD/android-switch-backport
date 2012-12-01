@@ -96,7 +96,6 @@ public class Switch extends CompoundButton {
     private Layout mOnLayout;
     private Layout mOffLayout;
 
-    @SuppressWarnings("hiding")
     private final Rect mTempRect = new Rect();
 
     private static final int[] CHECKED_STATE_SET = { android.R.attr.state_checked };
