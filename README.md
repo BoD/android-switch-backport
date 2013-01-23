@@ -20,64 +20,71 @@ to be one of the two possible themes: either `Widget.Holo.CompoundButton.Switch`
 (light).
 
 The simplest way to do that is to create a `themes.xml` file in your project's `res/values` folder with this contents:
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
 
-        <?xml version="1.0" encoding="utf-8"?>
-        <resources>
+    <style name="Theme" parent="@android:Theme">
+        <item name="switchStyle">@style/Widget.Holo.CompoundButton.Switch</item>
+    </style>
 
-            <style name="Theme" parent="@android:Theme">
-                <item name="switchStyle">@style/Widget.Holo.CompoundButton.Switch</item>
-            </style>
-
-        </resources>
-        
+</resources>
+```
 And use it in your Application or Activity by updating your `AndroidManifest.xml` file:
-
-        (...)
-        <application
-            android:theme="@style/Theme" 
-        (...)
+```xml
+(...)
+<application
+    android:theme="@style/Theme" 
+(...)
+```
 
 or
-
-        (...)
-        <activity
-            android:theme="@style/Theme" 
-        (...)
+```xml
+(...)
+<activity
+    android:theme="@style/Theme" 
+(...)
+```
 
 Then in your layout xml files you use the widget like this:
-
-        <org.jraf.android.backport.switchwidget.Switch
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+```xml
+<org.jraf.android.backport.switchwidget.Switch
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+```
 
 ### SwitchPreference
 
 Add switchPreferenceStyle to your 'themes.xml'
 
-        <?xml version="1.0" encoding="utf-8"?>
-        <resources>
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
 
-            <style name="Theme" parent="@android:Theme">
-                <item name="switchStyle">@style/Widget.Holo.CompoundButton.Switch</item>
-                <item name="switchPreferenceStyle">@style/Preference.SwitchPreference</item>
-            </style>
+    <style name="Theme" parent="@android:Theme">
+        <item name="switchStyle">@style/Widget.Holo.CompoundButton.Switch</item>
+        <item name="switchPreferenceStyle">@style/Preference.SwitchPreference</item>
+    </style>
 
-        </resources>
+</resources>
+```
 
 Then in your preference xml file:
 
-        <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:switchpref="http://schemas.android.com/apk/res-auto" >
+```xml
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:switchpref="http://schemas.android.com/apk/res-auto" >
 
-            <org.jraf.android.backport.switchwidget.SwitchPreference
-                android:key="testKey"
-                android:title="SwitchPreference Test"
-                switchpref:switchTextOff="@string/off"
-                switchpref:switchTextOn="@string/on"
-                switchpref:summaryOff="@string/summary_off"
-                switchpref:summaryOn="@string/summary_on" />
-      
-        </PreferenceScreen>
+    <org.jraf.android.backport.switchwidget.SwitchPreference
+        android:key="testKey"
+        android:title="SwitchPreference Test"
+        switchpref:switchTextOff="@string/off"
+        switchpref:switchTextOn="@string/on"
+        switchpref:summaryOff="@string/summary_off"
+        switchpref:summaryOn="@string/summary_on" />
+
+</PreferenceScreen>
+```
 
 Credits
 -------
