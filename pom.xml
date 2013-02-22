@@ -3,11 +3,20 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- Needed to deploy to Maven Central. -->
+
+    <parent>
+        <groupId>org.sonatype.oss</groupId>
+        <artifactId>oss-parent</artifactId>
+        <version>7</version>
+    </parent>
+
+
     <!-- Informational stuff. -->
 
     <groupId>org.jraf</groupId>
     <artifactId>android-switch-backport</artifactId>
-    <version>1.0</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>apklib</packaging>
     <name>Android Switch Backport</name>
     <description>
@@ -26,8 +35,9 @@
     </licenses>
 
     <scm>
-        <url>https://github.com/BoD/android-switch-backport</url>
-        <connection>scm:git:https://github.com/BoD/android-switch-backport.git</connection>
+        <url>git@github.com:BoD/android-switch-backport.git</url>
+        <connection>scm:git:git@github.com:BoD/android-switch-backport.git</connection>
+        <developerConnection>scm:git:git@github.com:BoD/android-switch-backport.git</developerConnection>
     </scm>
 
     <issueManagement>
@@ -81,10 +91,21 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.0</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-checkstyle-plugin</artifactId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.4</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
