@@ -9,11 +9,22 @@ This port works on Android 2.1+.
 How to use
 ----------
 
-### Switch
-
 This is an Android library project, you have to add it as a dependency to your project (please
 see http://developer.android.com/guide/developing/projects/projects-eclipse.html#ReferencingLibraryProject to
 know how to do that.)
+
+Alternatively, you can use it as a Maven dependency (the artefact is pushed to Maven Central) by putting this 
+in your pom.xml:
+```xml
+<dependency>
+    <groupId>org.jraf</groupId>
+    <artifactId>android-switch-backport</artifactId>
+    <version>1.0</version>
+    <type>apklib</type>
+</dependency>
+```
+
+### Switch
 
 Once you have done that, have a theme for your application (or Activity), that declares the `switchStyle` item
 to be one of the two possible themes: either `Widget.Holo.CompoundButton.Switch` (dark) or `Widget.Holo.Light.CompoundButton.Switch`
