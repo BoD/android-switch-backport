@@ -7,7 +7,7 @@
  *                              /___/
  * repository.
  *
- * Copyright 2012 Benoit 'BoD' Lubek (BoD@JRAF.org).  All Rights Reserved.
+ * Copyright (C) 2012 Benoit 'BoD' Lubek (BoD@JRAF.org)
  * Copyright (C) 2012 Intrications (intrications.com)
  * Copyright (C) 2010 The Android Open Source Project
  *
