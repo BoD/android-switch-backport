@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.path="$MODULE_DIR$/build.gradle" external.system.id="GRADLE" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/library/gen" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/sample/build/source/r/release" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/sample/build/source/buildConfig/debug" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/sample/build/source/r/debug" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/library/build/source/r/debug" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/library/build/source/r/release" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/sample/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/library/build/source/buildConfig/debug" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/sample/build/source/buildConfig/release" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/library/build/source/buildConfig/release" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/library/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
+
