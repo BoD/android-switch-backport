@@ -4,3 +4,4 @@ local.properties
 target/
 **/build/
 .gradle/
+.idea
