@@ -33,6 +33,7 @@ android {
     }
 }
 
+// Use "gradle uploadArchives" to deploy the aar to a local repository
 uploadArchives {
     repositories {
         mavenDeployer {
@@ -41,7 +42,7 @@ uploadArchives {
 
             pom.groupId = 'org.jraf'
             pom.artifactId = 'android-switch-backport'
-            pom.version = '1.1'
+            pom.version = '1.2'
             pom.packaging = 'aar'
         }
     }
