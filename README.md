@@ -36,7 +36,7 @@ dependency in your `pom.xml` file:
 <dependency>
     <groupId>org.jraf</groupId>
     <artifactId>android-switch-backport-apklib</artifactId>
-    <version>1.Z</version>
+    <version>1.2</version>
     <type>apklib</type>
 </dependency>
 ```
@@ -56,7 +56,7 @@ repositories {
  (...)
 
 dependencies {
-    compile "org.jraf:android-switch-backport:1.Z"
+    compile "org.jraf:android-switch-backport:1.2"
 }
 ```
 
