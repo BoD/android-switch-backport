@@ -363,6 +363,7 @@ public class Switch extends CompoundButton {
     }
 
     @Override
+    @TargetApi(Build.VERSION_CODES.GINGERBREAD)
     public boolean onTouchEvent(MotionEvent ev) {
         mVelocityTracker.addMovement(ev);
 
