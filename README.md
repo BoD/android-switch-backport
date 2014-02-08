@@ -6,7 +6,7 @@ that was introduced on Android 4.
 
 This port works on Android 2.1+.
 
-The current version of this library is `1.2`.
+The current version of this library is `1.3`.
 
 How to use
 ----------
@@ -36,7 +36,7 @@ dependency in your `pom.xml` file:
 <dependency>
     <groupId>org.jraf</groupId>
     <artifactId>android-switch-backport-apklib</artifactId>
-    <version>1.2</version>
+    <version>1.3</version>
     <type>apklib</type>
 </dependency>
 ```
@@ -56,7 +56,7 @@ repositories {
  (...)
 
 dependencies {
-    compile "org.jraf:android-switch-backport:1.2"
+    compile "org.jraf:android-switch-backport:1.3"
 }
 ```
 

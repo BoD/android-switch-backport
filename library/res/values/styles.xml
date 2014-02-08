@@ -55,13 +55,15 @@
     </style>
 
     <style name="TextAppearance.Holo.Widget.Switch" parent="android:TextAppearance.Small">
+
         <!-- Switch thumb asset presents a dark background. -->
         <item name="android:textColor">@color/secondary_text_holo_dark</item>
     </style>
 
     <style name="TextAppearance.Holo.Light.Widget.Switch" parent="android:TextAppearance.Small">
+
         <!-- Switch thumb asset presents a dark background. -->
-        <item name="android:textColor">@color/secondary_text_holo_dark</item>
+        <item name="android:textColor">@color/primary_text_holo_dark</item>
     </style>
 
 </resources>
