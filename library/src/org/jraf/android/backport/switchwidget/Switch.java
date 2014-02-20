@@ -24,6 +24,7 @@
  */
 package org.jraf.android.backport.switchwidget;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -362,6 +363,7 @@ public class Switch extends CompoundButton {
         return x > thumbLeft && x < thumbRight && y > thumbTop && y < thumbBottom;
     }
 
+    @SuppressLint("NewApi")
     @Override
     public boolean onTouchEvent(MotionEvent ev) {
         mVelocityTracker.addMovement(ev);
