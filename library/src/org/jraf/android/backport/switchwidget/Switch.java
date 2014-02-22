@@ -25,7 +25,6 @@
 package org.jraf.android.backport.switchwidget;
 
 import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
@@ -297,7 +296,7 @@ public class Switch extends CompoundButton {
     }
 
     @Override
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+    @SuppressLint("NewApi")
     public void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         if (mOnLayout == null) {
             mOnLayout = makeLayout(mTextOn);
