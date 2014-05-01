@@ -317,12 +317,17 @@ public class Switch extends CompoundButton {
 
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         final int measuredHeight = getMeasuredHeight();
-        if (measuredHeight < switchHeight) {
+        final int measuredWidth = getMeasuredWidth();
+        if (measuredHeight < switchHeight || measuredWidth < switchWidth) {
             if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {
-                setMeasuredDimension(getMeasuredWidth(), switchHeight);
+                setMeasuredDimension(switchWidth, switchHeight);
             }
             else {
-                setMeasuredDimension(getMeasuredWidthAndState(), switchHeight);
+                int width = switchWidth & MEASURED_SIZE_MASK;
+                int state = getMeasuredWidthAndState() & MEASURED_STATE_MASK;
+                int measuredWidthAndState = width & MEASURED_SIZE_MASK | state;
+
+                setMeasuredDimension(measuredWidthAndState, switchHeight);
             }
         }
     }
