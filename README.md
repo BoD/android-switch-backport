@@ -147,6 +147,15 @@ The SwitchPreference part was added later by Intrications (intrications.com / gi
 from Android and tweaking it a bit.  Other people also have contributed tweaks and fixes, please see this page for a detailed
 list: https://github.com/BoD/android-switch-backport/graphs/contributors
 
+Contributing
+------------
+
+Pull requests are welcome, as long as they are consistent to the original Switch / SwitchPreference of the
+Android sdk.
+
+Please do not contribute improvements that are not present in the original sdk classes!  I believe it would be
+confusing for this backport to have a feature set different than the original sdk classes.  It would also lead to difficult situations if/when stopping using this backport and using the sdk classes instead (which should happen when dropping support for old platforms).  Thank you very much.
+
 Licence
 -------
 
