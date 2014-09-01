@@ -6,64 +6,137 @@ that was introduced on Android 4.
 
 This port works on Android 2.1+.
 
+The current version of this library is `1.3.1`.
+
 How to use
 ----------
 
-### Switch
+### Adding the library to your project
+
+#### Option 1: Android library project (ant / Eclipse)
 
 This is an Android library project, you have to add it as a dependency to your project (please
-see http://developer.android.com/guide/developing/projects/projects-eclipse.html#ReferencingLibraryProject to
-know how to do that.)
+see http://developer.android.com/guide/developing/projects/projects-eclipse.html#ReferencingLibraryProject
+to know how to do that.)
+
+#### Option 2: Maven
+
+The apklib artifact is available at the JRAF.org repository. Declare the repository and the
+dependency in your `pom.xml` file:
+```xml
+<repository>
+    <id>JRAF.org</id>
+    <name>JRAF.org Maven Repository</name>
+    <url>http://JRAF.org/static/maven/2</url>
+    <layout>default</layout>
+</repository>
+
+ (...)
+
+<dependency>
+    <groupId>org.jraf</groupId>
+    <artifactId>android-switch-backport-apklib</artifactId>
+    <version>1.3.1</version>
+    <type>apklib</type>
+</dependency>
+```
+
+#### Option 3: Gradle
+
+The aar artifact is available at the JRAF.org repository. Declare the repository and the
+dependency in your `build.gradle` file:
+```groovy
+repositories {
+    mavenCentral()
+    maven {
+        url "http://JRAF.org/static/maven/2"
+    }
+}
+
+ (...)
+
+dependencies {
+    compile "org.jraf:android-switch-backport:1.3.1"
+}
+```
+
+### Using the Switch
 
 Once you have done that, have a theme for your application (or Activity), that declares the `switchStyle` item
 to be one of the two possible themes: either `Widget.Holo.CompoundButton.Switch` (dark) or `Widget.Holo.Light.CompoundButton.Switch`
 (light).
 
 The simplest way to do that is to create a `themes.xml` file in your project's `res/values` folder with this contents:
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
 
-        <?xml version="1.0" encoding="utf-8"?>
-        <resources>
+    <style name="Theme" parent="@android:style/Theme">
+        <item name="switchStyle">@style/Widget.Holo.CompoundButton.Switch</item>
+    </style>
 
-            <style name="Theme" parent="@android:Theme">
-                <item name="switchStyle">@style/Widget.Holo.CompoundButton.Switch</item>
-            </style>
+</resources>
+```
+And use it in your Application or Activity by updating your `AndroidManifest.xml` file:
+```xml
+(...)
+<application
+    android:theme="@style/Theme" 
+(...)
+```
 
-        </resources>
+or
+```xml
+(...)
+<activity
+    android:theme="@style/Theme" 
+(...)
+```
 
-Then in your layout xml files you can use the widget like this:
+Then in your layout xml files you use the widget like this:
+```xml
+<org.jraf.android.backport.switchwidget.Switch
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+```
 
-        <org.jraf.android.backport.switchwidget.Switch
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-### SwitchPreference
+### Using the SwitchPreference
 
 Add switchPreferenceStyle to your 'themes.xml'
 
-        <?xml version="1.0" encoding="utf-8"?>
-        <resources>
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
 
-            <style name="Theme" parent="@android:Theme">
-                <item name="switchStyle">@style/Widget.Holo.CompoundButton.Switch</item>
-                <item name="switchPreferenceStyle">@style/Preference.SwitchPreference</item>
-            </style>
+    <style name="Theme" parent="@android:Theme">
+        <item name="switchStyle">@style/Widget.Holo.CompoundButton.Switch</item>
+        <item name="switchPreferenceStyle">@style/Preference.SwitchPreference</item>
+    </style>
 
-        </resources>
+</resources>
+```
 
 Then in your preference xml file:
 
-        <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:switchpref="http://schemas.android.com/apk/res-auto" >
+```xml
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:switchpref="http://schemas.android.com/apk/res-auto" >
 
-            <org.jraf.android.backport.switchwidget.SwitchPreference
-                android:key="testKey"
-                android:title="SwitchPreference Test"
-                switchpref:switchTextOff="@string/off"
-                switchpref:switchTextOn="@string/on"
-                switchpref:summaryOff="@string/summary_off"
-                switchpref:summaryOn="@string/summary_on" />
-      
-        </PreferenceScreen>
+    <org.jraf.android.backport.switchwidget.SwitchPreference
+        android:key="testKey"
+        android:title="SwitchPreference Test"
+        switchpref:switchTextOff="@string/off"
+        switchpref:switchTextOn="@string/on"
+        switchpref:summaryOff="@string/summary_off"
+        switchpref:summaryOn="@string/summary_on" />
+
+</PreferenceScreen>
+```
+
+### Sample app
+
+A sample app is available in the [sample](sample) folder, and also on the Play Store:
+[![Get it on Google Play](http://www.android.com/images/brand/get_it_on_play_logo_small.png)](https://play.google.com/store/apps/details?id=org.jraf.android.backport.switchwidget.sample)
 
 Credits
 -------
@@ -71,7 +144,17 @@ Credits
 The code was copied directly from the Android 4.0.3 (API 15) source code, then slightly tweaked by myself (BoD@JRAF.org) to make
 it run on 2.1+.  The few modifications I made are documented in the code (look for 'XXX' comments).
 The SwitchPreference part was added later by Intrications (intrications.com / github.com/intrications), also by taking code
-from Android and tweaking it a bit.
+from Android and tweaking it a bit.  Other people also have contributed tweaks and fixes, please see this page for a detailed
+list: https://github.com/BoD/android-switch-backport/graphs/contributors
+
+Contributing
+------------
+
+Pull requests are welcome, as long as they are consistent to the original Switch / SwitchPreference of the
+Android sdk.
+
+Please do not contribute improvements that are not present in the original sdk classes!  I believe it would be
+confusing for this backport to have a feature set different than the original sdk classes.  It would also lead to difficult situations if/when stopping using this backport and using the sdk classes instead (which should happen when dropping support for old platforms).  Thank you very much.
 
 Licence
 -------
