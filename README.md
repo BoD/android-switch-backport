@@ -56,8 +56,8 @@ dependency in your `pom.xml` file:
 </dependency>
 ```
 
-Note: the artifact used to be hosted on the JRAF.org repository, but due to server problems, 
-they are now hosted on jcenter. Please update your dependencies!
+Note: the artifacts used to be hosted on the JRAF.org repository, but due to server problems, 
+they are now hosted on jcenter. Please update your repository declarations!
 
 ### Using the Switch
 
