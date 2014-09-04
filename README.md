@@ -19,46 +19,45 @@ This is an Android library project, you have to add it as a dependency to your p
 see http://developer.android.com/guide/developing/projects/projects-eclipse.html#ReferencingLibraryProject
 to know how to do that.)
 
-#### Option 2: Maven
+#### Option 2: Gradle
 
-The apklib artifact is available at the JRAF.org repository. Declare the repository and the
+The aar artifact is available at the **jcenter** repository. Declare the repository and the
+dependency in your `build.gradle` file:
+```groovy
+repositories {
+    jcenter()
+}
+
+ (...)
+
+dependencies {
+    compile 'org.jraf:android-switch-backport:1.3.1'
+}
+```
+
+#### Option 3: Maven
+
+The apklib artifact is available at the **jcenter** repository. Declare the repository and the
 dependency in your `pom.xml` file:
 ```xml
 <repository>
-    <id>JRAF.org</id>
-    <name>JRAF.org Maven Repository</name>
-    <url>http://JRAF.org/static/maven/2</url>
-    <layout>default</layout>
+    <id>central</id>
+    <name>bintray</name>
+    <url>http://jcenter.bintray.com</url>
 </repository>
 
  (...)
 
 <dependency>
     <groupId>org.jraf</groupId>
-    <artifactId>android-switch-backport-apklib</artifactId>
+    <artifactId>android-switch-backport</artifactId>
     <version>1.3.1</version>
     <type>apklib</type>
 </dependency>
 ```
 
-#### Option 3: Gradle
-
-The aar artifact is available at the JRAF.org repository. Declare the repository and the
-dependency in your `build.gradle` file:
-```groovy
-repositories {
-    mavenCentral()
-    maven {
-        url "http://JRAF.org/static/maven/2"
-    }
-}
-
- (...)
-
-dependencies {
-    compile "org.jraf:android-switch-backport:1.3.1"
-}
-```
+Note: the artifact used to be hosted on the JRAF.org repository, but due to server problems, 
+they are now hosted on jcenter. Please update your dependencies!
 
 ### Using the Switch
 
