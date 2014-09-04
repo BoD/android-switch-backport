@@ -13,13 +13,7 @@ How to use
 
 ### Adding the library to your project
 
-#### Option 1: Android library project (ant / Eclipse)
-
-This is an Android library project, you have to add it as a dependency to your project (please
-see http://developer.android.com/guide/developing/projects/projects-eclipse.html#ReferencingLibraryProject
-to know how to do that.)
-
-#### Option 2: Gradle
+#### Option 1: Gradle
 
 The aar artifact is available at the **jcenter** repository. Declare the repository and the
 dependency in your `build.gradle` file:
@@ -34,6 +28,12 @@ dependencies {
     compile 'org.jraf:android-switch-backport:1.3.1'
 }
 ```
+
+#### Option 2: Android library project (ant / Eclipse)
+
+This is an Android library project, you have to add it as a dependency to your project (please
+see [this page](http://developer.android.com/guide/developing/projects/projects-eclipse.html#ReferencingLibraryProject)
+to know how to do that.)
 
 #### Option 3: Maven
 
