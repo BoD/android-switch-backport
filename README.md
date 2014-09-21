@@ -107,7 +107,7 @@ Add switchPreferenceStyle to your 'themes.xml'
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme" parent="@android:Theme">
+    <style name="Theme" parent="@android:style/Theme">
         <item name="switchStyle">@style/Widget.Holo.CompoundButton.Switch</item>
         <item name="switchPreferenceStyle">@style/Preference.SwitchPreference</item>
     </style>
