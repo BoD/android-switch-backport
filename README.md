@@ -61,7 +61,7 @@ they are now hosted on jcenter. Please update your repository declarations!
 
 ### Using the Switch
 
-Once you have done that, have a theme for your application (or Activity), that declares the `switchStyle` item
+Once you have done that, have a theme for your application (or Activity), that declares the `asb_switchStyle` item
 to be one of the two possible themes: either `Widget.Holo.CompoundButton.Switch` (dark) or `Widget.Holo.Light.CompoundButton.Switch`
 (light).
 
@@ -71,7 +71,7 @@ The simplest way to do that is to create a `themes.xml` file in your project's `
 <resources>
 
     <style name="Theme" parent="@android:style/Theme">
-        <item name="switchStyle">@style/Widget.Holo.CompoundButton.Switch</item>
+        <item name="asb_switchStyle">@style/Widget.Holo.CompoundButton.Switch</item>
     </style>
 
 </resources>
@@ -101,15 +101,15 @@ Then in your layout xml files you use the widget like this:
 
 ### Using the SwitchPreference
 
-Add switchPreferenceStyle to your 'themes.xml'
+Add `asb_switchPreferenceStyle` to your 'themes.xml'
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     <style name="Theme" parent="@android:style/Theme">
-        <item name="switchStyle">@style/Widget.Holo.CompoundButton.Switch</item>
-        <item name="switchPreferenceStyle">@style/Preference.SwitchPreference</item>
+        <item name="asb_switchStyle">@style/Widget.Holo.CompoundButton.Switch</item>
+        <item name="asb_switchPreferenceStyle">@style/Preference.SwitchPreference</item>
     </style>
 
 </resources>
@@ -124,10 +124,10 @@ Then in your preference xml file:
     <org.jraf.android.backport.switchwidget.SwitchPreference
         android:key="testKey"
         android:title="SwitchPreference Test"
-        switchpref:switchTextOff="@string/off"
-        switchpref:switchTextOn="@string/on"
-        switchpref:summaryOff="@string/summary_off"
-        switchpref:summaryOn="@string/summary_on" />
+        switchpref:asb_switchTextOff="@string/off"
+        switchpref:asb_switchTextOn="@string/on"
+        switchpref:asb_summaryOff="@string/summary_off"
+        switchpref:asb_summaryOn="@string/summary_on" />
 
 </PreferenceScreen>
 ```

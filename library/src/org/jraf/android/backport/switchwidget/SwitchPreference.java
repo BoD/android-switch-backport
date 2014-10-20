@@ -39,11 +39,11 @@ import android.widget.CompoundButton;
  * <p>
  * This preference will store a boolean into the SharedPreferences.
  * 
- * @attr ref android.R.styleable#SwitchPreference_summaryOff
- * @attr ref android.R.styleable#SwitchPreference_summaryOn
- * @attr ref android.R.styleable#SwitchPreference_switchTextOff
- * @attr ref android.R.styleable#SwitchPreference_switchTextOn
- * @attr ref android.R.styleable#SwitchPreference_disableDependentsState
+ * @attr ref android.R.styleable#SwitchPreference_asb_summaryOff
+ * @attr ref android.R.styleable#SwitchPreference_asb_summaryOn
+ * @attr ref android.R.styleable#SwitchPreference_asb_switchTextOff
+ * @attr ref android.R.styleable#SwitchPreference_asb_switchTextOn
+ * @attr ref android.R.styleable#SwitchPreference_asb_disableDependentsState
  */
 public class SwitchPreference extends TwoStatePreference {
 	// Switch text for on and off states
@@ -80,14 +80,14 @@ public class SwitchPreference extends TwoStatePreference {
 		super(context, attrs, defStyle);
 
 		TypedArray a = context.obtainStyledAttributes(attrs,
-				R.styleable.SwitchPreference, R.attr.switchPreferenceStyle, 0);
-		setSummaryOn(a.getString(R.styleable.SwitchPreference_summaryOn));
-		setSummaryOff(a.getString(R.styleable.SwitchPreference_summaryOff));
-		setSwitchTextOn(a.getString(R.styleable.SwitchPreference_switchTextOn));
+				R.styleable.SwitchPreference, R.attr.asb_switchPreferenceStyle, 0);
+		setSummaryOn(a.getString(R.styleable.SwitchPreference_asb_summaryOn));
+		setSummaryOff(a.getString(R.styleable.SwitchPreference_asb_summaryOff));
+		setSwitchTextOn(a.getString(R.styleable.SwitchPreference_asb_switchTextOn));
 		setSwitchTextOff(a
-				.getString(R.styleable.SwitchPreference_switchTextOff));
+				.getString(R.styleable.SwitchPreference_asb_switchTextOff));
 		setDisableDependentsState(a.getBoolean(
-				R.styleable.SwitchPreference_disableDependentsState, false));
+				R.styleable.SwitchPreference_asb_disableDependentsState, false));
 		a.recycle();
 	}
 
@@ -100,7 +100,7 @@ public class SwitchPreference extends TwoStatePreference {
 	 *            Style attributes that differ from the default
 	 */
 	public SwitchPreference(Context context, AttributeSet attrs) {
-		this(context, attrs, R.attr.switchPreferenceStyle);
+		this(context, attrs, R.attr.asb_switchPreferenceStyle);
 	}
 
 	/**
