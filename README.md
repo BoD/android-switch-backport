@@ -6,7 +6,14 @@ that was introduced on Android 4.
 
 This port works on Android 2.1+.
 
-The current version of this library is `1.3.1`.
+The current version of this library is `1.4.0`.
+
+**IMPORTANT**
+The **1.4.0** release has an incompatible change that requires you to update your `themes.xml` and layout files.
+Specifically, `switchStyle` has been renamed to `asb_switchStyle`, and `switchPreferenceStyle` becomes `asb_switchPreferenceStyle`.
+Similarly, all the switch attributes have been prefixed so `switchTextOn` is now `asb_switchTextOn`, and so on.
+
+I am sorry about this but this has been necessary to avoid conflicts with the latest support library.
 
 How to use
 ----------
@@ -25,7 +32,7 @@ repositories {
  (...)
 
 dependencies {
-    compile 'org.jraf:android-switch-backport:1.3.1'
+    compile 'org.jraf:android-switch-backport:1.4.0'
 }
 ```
 
@@ -51,12 +58,12 @@ dependency in your `pom.xml` file:
 <dependency>
     <groupId>org.jraf</groupId>
     <artifactId>android-switch-backport</artifactId>
-    <version>1.3.1</version>
+    <version>1.4.0</version>
     <type>apklib</type>
 </dependency>
 ```
 
-Note: the artifacts used to be hosted on the JRAF.org repository, but due to server problems, 
+Note: the artifacts used to be hosted on the JRAF.org repository, but due to server problems,
 they are now hosted on jcenter. Please update your repository declarations!
 
 ### Using the Switch
@@ -80,7 +87,7 @@ And use it in your Application or Activity by updating your `AndroidManifest.xml
 ```xml
 (...)
 <application
-    android:theme="@style/Theme" 
+    android:theme="@style/Theme"
 (...)
 ```
 
@@ -88,7 +95,7 @@ or
 ```xml
 (...)
 <activity
-    android:theme="@style/Theme" 
+    android:theme="@style/Theme"
 (...)
 ```
 
