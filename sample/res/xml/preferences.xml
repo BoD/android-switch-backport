@@ -27,7 +27,7 @@
     <org.jraf.android.backport.switchwidget.SwitchPreference
         android:key="testKey"
         android:title="SwitchPreference Test"
-        switchpref:summaryOff="@string/summary_off"
-        switchpref:summaryOn="@string/summary_on" />
+        switchpref:asb_summaryOff="@string/summary_off"
+        switchpref:asb_summaryOn="@string/summary_on" />
 
 </PreferenceScreen>

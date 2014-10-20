@@ -25,8 +25,8 @@
 <resources>
 
     <style name="Theme" parent="@android:style/Theme.Holo">
-        <item name="switchStyle">@style/Widget.Holo.CompoundButton.Switch</item>
-        <item name="switchPreferenceStyle">@style/Preference.SwitchPreference</item>
+        <item name="asb_switchStyle">@style/Widget.Holo.CompoundButton.Switch</item>
+        <item name="asb_switchPreferenceStyle">@style/Preference.SwitchPreference</item>
     </style>
 
 </resources>
