@@ -4,7 +4,7 @@ apply plugin: 'maven'
 group = 'org.jraf'
 ext.groupPath = group.replace('.', '/')
 ext.artifactId = 'android-switch-backport'
-version = '1.4.0'
+version = '2.0.0'
 
 
 android {
@@ -29,6 +29,10 @@ android {
             res.srcDirs = ['res']
         }
     }
+}
+
+dependencies {
+    compile "com.android.support:appcompat-v7:21.0.3"
 }
 
 // Use "gradle uploadArchives" to deploy the aar to your local maven repository

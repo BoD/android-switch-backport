@@ -24,46 +24,10 @@
      limitations under the License.
 -->
 <resources>
-
-    <style name="Widget.Holo.CompoundButton.Switch" parent="android:Widget.CompoundButton">
-        <item name="asb_track">@drawable/switch_track_holo_dark</item>
-        <item name="asb_thumb">@drawable/switch_inner_holo_dark</item>
-        <item name="asb_switchTextAppearance">@style/TextAppearance.Holo.Widget.Switch</item>
-        <item name="asb_textOn">@string/switch_on</item>
-        <item name="asb_textOff">@string/switch_off</item>
-        <item name="asb_thumbTextPadding">12dip</item>
-        <item name="asb_switchMinWidth">96dip</item>
-        <item name="asb_switchPadding">16dip</item>
-    </style>
-
-    <style name="Widget.Holo.Light.CompoundButton.Switch" parent="android:Widget.CompoundButton">
-        <item name="asb_track">@drawable/switch_track_holo_light</item>
-        <item name="asb_thumb">@drawable/switch_inner_holo_light</item>
-        <item name="asb_switchTextAppearance">@style/TextAppearance.Holo.Light.Widget.Switch</item>
-        <item name="asb_textOn">@string/switch_on</item>
-        <item name="asb_textOff">@string/switch_off</item>
-        <item name="asb_thumbTextPadding">12dip</item>
-        <item name="asb_switchMinWidth">96dip</item>
-        <item name="asb_switchPadding">16dip</item>
-    </style>
-
-    <style name="Preference.SwitchPreference" parent="">
+    <style name="asb_Preference.SwitchPreference" parent="">
         <item name="android:layout">@layout/preference</item>
         <item name="android:widgetLayout">@layout/preference_widget_switch</item>
-        <item name="asb_switchTextOn">@string/switch_on</item>
-        <item name="asb_switchTextOff">@string/switch_off</item>
+        <item name="asb_switchTextOn">@string/asb_switch_on</item>
+        <item name="asb_switchTextOff">@string/asb_switch_off</item>
     </style>
-
-    <style name="TextAppearance.Holo.Widget.Switch" parent="android:TextAppearance.Small">
-
-        <!-- Switch thumb asset presents a dark background. -->
-        <item name="android:textColor">@color/secondary_text_holo_dark</item>
-    </style>
-
-    <style name="TextAppearance.Holo.Light.Widget.Switch" parent="android:TextAppearance.Small">
-
-        <!-- Switch thumb asset presents a dark background. -->
-        <item name="android:textColor">@color/primary_text_holo_dark</item>
-    </style>
-
 </resources>

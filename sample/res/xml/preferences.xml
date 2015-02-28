@@ -22,12 +22,29 @@
      limitations under the License.
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:switchpref="http://schemas.android.com/apk/res-auto" >
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- Switch Compat Preference -->
     <org.jraf.android.backport.switchwidget.SwitchPreference
         android:key="testKey"
-        android:title="SwitchPreference Test"
-        switchpref:asb_summaryOff="@string/summary_off"
-        switchpref:asb_summaryOn="@string/summary_on" />
+        android:title="Switch Compat Preference"
+        app:asb_summaryOff="@string/summary_off"
+        app:asb_summaryOn="@string/summary_on" />
+
+    <!-- Regular Switch Preference (to compare) -->
+    <!--<SwitchPreference-->
+        <!--android:key="testKey2"-->
+        <!--android:summaryOff="@string/summary_off"-->
+        <!--android:summaryOn="@string/summary_on"-->
+        <!--android:switchTextOff="@string/asb_switch_off"-->
+        <!--android:switchTextOn="@string/asb_switch_on"-->
+        <!--android:title="Switch Preference" />-->
+
+    <!-- CheckBox Preference (to compare) -->
+    <CheckBoxPreference
+        android:key="testKey3"
+        android:summaryOff="@string/summary_off"
+        android:summaryOn="@string/summary_on"
+        android:title="CheckBox Preference" />
 
 </PreferenceScreen>

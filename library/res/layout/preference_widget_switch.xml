@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
+     This source is part of the
+          _____  ___   ____
+      __ / / _ \/ _ | / __/___  _______ _
+     / // / , _/ __ |/ _/_/ _ \/ __/ _ `/
+     \___/_/|_/_/ |_/_/ (_)___/_/  \_, /
+                                  /___/
+     repository.
+
+     Copyright (C) 2015 Benoit 'BoD' Lubek (BoD@JRAF.org)
      Copyright (C) 2011 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,15 +24,13 @@
      limitations under the License.
 -->
 
-<!--
-     Layout used by SwitchPreference for the switch widget style. This is inflated
-     inside android.R.layout.preference.
--->
-<org.jraf.android.backport.switchwidget.Switch xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- Layout used by SwitchPreference for the switch widget style. This is inflated
+     inside android.R.layout.preference. -->
+<android.support.v7.widget.SwitchCompat xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/switchWidget"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_gravity="center"
     android:focusable="false"
-    android:padding="16dip" />
+    android:clickable="false"
+    android:background="@null" />
 

@@ -25,8 +25,7 @@
 -->
 <resources>
 
-    <declare-styleable name="SwitchPreference">
-
+    <declare-styleable name="asb_SwitchPreference">
         <!--
              The summary for the Preference in a PreferenceActivity screen when the
              SwitchPreference is checked. If separate on/off summaries are not
@@ -55,45 +54,9 @@
         -->
         <attr name="asb_disableDependentsState" format="boolean" />
     </declare-styleable>
-    <declare-styleable name="Switch">
 
-        <!-- Drawable to use as the "thumb" that switches back and forth. -->
-        <attr name="asb_thumb" format="reference" />
-        <!-- Drawable to use as the "track" that the switch thumb slides within. -->
-        <attr name="asb_track" format="reference" />
-        <!-- Text to use when the switch is in the checked/"on" state. -->
-        <attr name="asb_textOn" format="reference" />
-        <!-- Text to use when the switch is in the unchecked/"off" state. -->
-        <attr name="asb_textOff" format="reference" />
-        <!-- Amount of padding on either side of text within the switch thumb. -->
-        <attr name="asb_thumbTextPadding" format="dimension" />
-        <!-- TextAppearance style for text displayed on the switch thumb. -->
-        <attr name="asb_switchTextAppearance" format="reference" />
-        <!-- Minimum width for the switch component -->
-        <attr name="asb_switchMinWidth" format="dimension" />
-        <!-- Minimum space between the switch and caption text -->
-        <attr name="asb_switchPadding" format="dimension" />
-    </declare-styleable>
-    <declare-styleable name="SwitchBackportTheme">
-        <attr name="asb_switchStyle" format="reference" />
+    <declare-styleable name="asb_SwitchBackportTheme">
         <attr name="asb_switchPreferenceStyle" format="reference" />
-    </declare-styleable>
-    <declare-styleable name="Android">
-
-        <!-- Text color. -->
-        <attr name="android:textColor" />
-        <!-- Size of the text. Recommended dimension type for text is "sp" for scaled-pixels (example: 15sp). -->
-        <attr name="android:textSize" />
-        <!-- Style (bold, italic, bolditalic) for the text. -->
-        <attr name="android:textStyle" />
-        <!-- Typeface (normal, sans, serif, monospace) for the text. -->
-        <attr name="android:typeface" />
-        <!-- Color of the text selection highlight. -->
-        <attr name="android:textColorHighlight" />
-        <!-- Color of the hint text. -->
-        <attr name="android:textColorHint" />
-        <!-- Color of the links. -->
-        <attr name="android:textColorLink" />
     </declare-styleable>
 
 </resources>

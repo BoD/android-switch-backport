@@ -1,88 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-         Copyright (C) 2011 The Android Open Source Project
+     This source is part of the
+          _____  ___   ____
+      __ / / _ \/ _ | / __/___  _______ _
+     / // / , _/ __ |/ _/_/ _ \/ __/ _ `/
+     \___/_/|_/_/ |_/_/ (_)___/_/  \_, /
+                                  /___/
+     repository.
 
-         Licensed under the Apache License, Version 2.0 (the "License");
-         you may not use this file except in compliance with the License.
-         You may obtain a copy of the License at
+     Copyright (C) 2015 Benoit 'BoD' Lubek (BoD@JRAF.org)
+     Copyright (C) 2011 The Android Open Source Project
 
-              http://www.apache.org/licenses/LICENSE-2.0
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
 
-         Unless required by applicable law or agreed to in writing, software
-         distributed under the License is distributed on an "AS IS" BASIS,
-         WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-         See the License for the specific language governing permissions and
-         limitations under the License.
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
 -->
 
-<!--
-         Layout for a Preference in a PreferenceActivity. The
-         Preference is able to place a specific widget for its particular
-         type in the "widget_frame" layout.
--->
+<!-- Layout for a Preference in a PreferenceActivity. The
+     Preference is able to place a specific widget for its particular
+     type in the "widget_frame" layout. -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:baselineAligned="false"
-    android:gravity="center_vertical"
     android:minHeight="?android:attr/listPreferredItemHeight"
+    android:gravity="center_vertical"
+    android:paddingStart="@dimen/preference_item_padding_side"
+    android:paddingEnd="?android:attr/scrollbarSize"
     android:paddingLeft="@dimen/preference_item_padding_side"
-    android:paddingRight="?android:attr/scrollbarSize" >
+    android:paddingRight="?android:attr/scrollbarSize"
+    android:background="?android:attr/activatedBackgroundIndicator">
 
     <LinearLayout
         android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
+        android:layout_height="match_parent"
         android:gravity="center"
         android:minWidth="@dimen/preference_icon_minWidth"
-        android:orientation="horizontal" >
-
+        android:orientation="horizontal">
         <ImageView
             android:id="@android:id/icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:layout_gravity="center"
             android:minWidth="48dp"
-            android:paddingRight="@dimen/preference_item_padding_inner"
-            tools:ignore="ContentDescription" />
+            android:scaleType="centerInside"
+            android:layout_marginEnd="@dimen/preference_item_padding_inner"
+            android:layout_marginRight="@dimen/preference_item_padding_inner"
+            />
     </LinearLayout>
 
     <RelativeLayout
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:paddingBottom="6dip"
+        android:paddingEnd="@dimen/preference_item_padding_inner"
         android:paddingRight="@dimen/preference_item_padding_inner"
-        android:paddingTop="6dip" >
+        android:paddingTop="6dip"
+        android:paddingBottom="6dip">
 
-        <TextView
-            android:id="@android:id/title"
+        <TextView android:id="@android:id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ellipsize="marquee"
-            android:fadingEdge="horizontal"
             android:singleLine="true"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:ellipsize="marquee"
+            android:fadingEdge="horizontal" />
 
-        <TextView
-            android:id="@android:id/summary"
+        <TextView android:id="@android:id/summary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@android:id/title"
             android:layout_below="@android:id/title"
-            android:maxLines="10"
+            android:layout_alignStart="@android:id/title"
+            android:layout_alignLeft="@android:id/title"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="?android:attr/textColorSecondary" />
+            android:textColor="?android:attr/textColorSecondary"
+            android:maxLines="10" />
+
     </RelativeLayout>
 
     <!-- Preference should place its actual preference widget here. -->
-
-    <LinearLayout
-        android:id="@android:id/widget_frame"
+    <LinearLayout android:id="@android:id/widget_frame"
         android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
-        android:gravity="center"
+        android:layout_height="match_parent"
         android:minWidth="@dimen/preference_widget_width"
+        android:gravity="center"
         android:orientation="vertical" />
 
 </LinearLayout>

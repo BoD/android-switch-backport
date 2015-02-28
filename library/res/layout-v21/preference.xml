@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2011 The Android Open Source Project
+<!--
+     This source is part of the
+          _____  ___   ____
+      __ / / _ \/ _ | / __/___  _______ _
+     / // / , _/ __ |/ _/_/ _ \/ __/ _ `/
+     \___/_/|_/_/ |_/_/ (_)___/_/  \_, /
+                                  /___/
+     repository.
+
+     Copyright (C) 2015 Benoit 'BoD' Lubek (BoD@JRAF.org)
+     Copyright (C) 2014 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -17,53 +27,55 @@
 <!-- Layout for a Preference in a PreferenceActivity. The
      Preference is able to place a specific widget for its particular
      type in the "widget_frame" layout. -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:minHeight="?android:attr/listPreferredItemHeight"
+    android:minHeight="?attr/listPreferredItemHeightSmall"
     android:gravity="center_vertical"
-    android:paddingStart="@dimen/preference_item_padding_side"
-    android:paddingEnd="?android:attr/scrollbarSize">
+    android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+    android:background="?android:attr/activatedBackgroundIndicator"
+    android:clipToPadding="false">
 
     <LinearLayout
+        android:id="@+id/icon_frame"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:minWidth="@dimen/preference_icon_minWidth"
-        android:orientation="horizontal">
-        <ImageView
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-4dp"
+        android:minWidth="60dp"
+        android:gravity="start|center_vertical"
+        android:orientation="horizontal"
+        android:paddingEnd="12dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+        <com.android.internal.widget.PreferenceImageView
             android:id="@android:id/icon"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_gravity="center"
-            android:minWidth="48dp"
-            android:scaleType="centerInside"
-            android:layout_marginEnd="@dimen/preference_item_padding_inner"
-             />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="48dp"
+            android:maxHeight="48dp" />
     </LinearLayout>
 
     <RelativeLayout
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:paddingEnd="@dimen/preference_item_padding_inner"
-        android:paddingTop="6dip"
-        android:paddingBottom="6dip">
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
 
         <TextView android:id="@android:id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:singleLine="true"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:ellipsize="marquee"
-            android:fadingEdge="horizontal" />
+            android:textAppearance="?attr/textAppearanceListItem"
+            android:ellipsize="marquee" />
 
         <TextView android:id="@android:id/summary"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@android:id/title"
             android:layout_alignStart="@android:id/title"
-            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textAppearance="?android:attr/textAppearanceListItemSecondary"
             android:textColor="?android:attr/textColorSecondary"
             android:maxLines="10" />
 
@@ -73,8 +85,8 @@
     <LinearLayout android:id="@android:id/widget_frame"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:minWidth="@dimen/preference_widget_width"
-        android:gravity="center"
+        android:gravity="end|center_vertical"
+        android:paddingStart="16dp"
         android:orientation="vertical" />
 
 </LinearLayout>

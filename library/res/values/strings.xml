@@ -25,7 +25,7 @@
 -->
 <resources>
 
-    <string name="switch_on">ON</string>
-    <string name="switch_off">OFF</string>
+    <string name="asb_switch_on">ON</string>
+    <string name="asb_switch_off">OFF</string>
 
 </resources>
