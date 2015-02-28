@@ -1,8 +1,7 @@
 Android Switch Preference Backport
 ===
 
-A backport of the `SwitchPreference` component (http://developer.android.com/reference/android/preference/SwitchPreference.html)
-that was introduced on Android 4 (ICS / level 14).
+A backport of the [`SwitchPreference`](http://developer.android.com/reference/android/preference/SwitchPreference.html) component that was introduced on Android 4 (ICS / level 14).
 
 This port works on Android 2.1+ (Eclair MR1 / level 7).
 
@@ -13,13 +12,13 @@ IMPORTANT: UPDATE NOTICE
 The v1 of this library used to backport the **Switch** widget as well as the **SwitchPreference** component.
 
 Since the AppCompat v21 library now includes a **Switch** widget backport ([`SwitchCompat`](http://developer.android.com/reference/android/support/v7/widget/SwitchCompat.html)),
-the backport from this library is no longer needed.  That is why the v2 of this library now **only includes the SwitchPreference backport**.
+another backport is no longer needed.  That is why the v2 of this library now **only includes the SwitchPreference backport**.
 
 This backport depends on the AppCompat library (the `SwitchPreference` embeds a `SwitchCompat`).
 
-If your app needs `Switch`es only, you do not need this library anymore, please use the AppCompat's `SwitchCompat` instead.
+***If your app needs Switches only, you do not need this library anymore!  Please use the AppCompat's `SwitchCompat` instead***
 
-If your app needs `SwitchPreference`s however this library is for you! :)
+If your app needs SwitchPreferences however this library is for you! :)
 
 
 How to use
