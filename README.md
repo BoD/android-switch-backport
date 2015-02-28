@@ -137,7 +137,7 @@ list: https://github.com/BoD/android-switch-backport/graphs/contributors.
 Contributing
 ---
 
-Pull requests are welcome, as long as they are consistent to the original Switch / SwitchPreference of the
+Pull requests are welcome, as long as they are consistent to the original SwitchPreference of the
 Android sdk.
 
 Please do not contribute improvements that are not present in the original sdk classes!  I believe it would be
