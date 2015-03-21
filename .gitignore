@@ -5,3 +5,5 @@ target/
 **/build/
 .gradle/
 .idea
+.DS_Store
+*.iml

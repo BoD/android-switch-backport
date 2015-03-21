@@ -8,12 +8,12 @@ version = '2.0.0'
 
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion '21.1.2'
+    compileSdkVersion 22
+    buildToolsVersion '22.0.0'
 
     defaultConfig {
         minSdkVersion 7
-        targetSdkVersion 21
+        targetSdkVersion 22
     }
     buildTypes {
         release {
@@ -32,7 +32,7 @@ android {
 }
 
 dependencies {
-    compile "com.android.support:appcompat-v7:21.0.3"
+    compile "com.android.support:appcompat-v7:22.0.0"
 }
 
 // Use "gradle uploadArchives" to deploy the aar to your local maven repository
@@ -53,7 +53,7 @@ android.libraryVariants.all { variant ->
         ext.androidJar = "${android.sdkDirectory}/platforms/${android.compileSdkVersion}/android.jar"
         classpath = files(variant.javaCompile.classpath.files) + files(ext.androidJar)
         options.links("http://docs.oracle.com/javase/7/docs/api/");
-        options.links("http://d.android.com/reference/");
+        options.linksOffline('https://developer.android.com/reference/', "${android.sdkDirectory}/docs/reference");
         options.tags(["attr", "X"])
         exclude '**/BuildConfig.java'
         exclude '**/R.java'
@@ -81,16 +81,18 @@ task install(dependsOn: ["assembleRelease", "uploadArchives", "jarReleaseSources
     description "Make the library, generate a source jar, generate a javadoc jar, and copy everything to the local maven repository"
 
     // Copy the sources jar
+    println("Copying " + buildDir.getPath() + "/libs/library-${version}-sources.jar" + " to " + "${repositories.mavenLocal().getUrl()}/${groupPath}/${artifactId}/${version}" + "/${artifactId}-${version}-sources.jar")
     copy {
-        from buildDir.getPath() + '/libs/library-sources.jar'
+        from buildDir.getPath() + "/libs/library-${version}-sources.jar"
         into "${repositories.mavenLocal().getUrl()}/${groupPath}/${artifactId}/${version}"
-        rename 'library-sources.jar', "${artifactId}-${version}-sources.jar"
+        rename "library-${version}-sources.jar", "${artifactId}-${version}-sources.jar"
     }
 
     // Copy the javadoc jar
     copy {
-        from buildDir.getPath() + '/libs/library-javadoc.jar'
+        println("Copying " + buildDir.getPath() + "/libs/library-${version}-javadoc.jar" + " to " + "${repositories.mavenLocal().getUrl()}/${groupPath}/${artifactId}/${version}" + "/${artifactId}-${version}-javadoc.jar")
+        from buildDir.getPath() + "/libs/library-${version}-javadoc.jar"
         into "${repositories.mavenLocal().getUrl()}/${groupPath}/${artifactId}/${version}"
-        rename 'library-javadoc.jar', "${artifactId}-${version}-javadoc.jar"
+        rename "library-${version}-javadoc.jar", "${artifactId}-${version}-javadoc.jar"
     }
 }
