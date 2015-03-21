@@ -12,13 +12,15 @@ IMPORTANT: UPDATE NOTICE
 The v1 of this library used to backport the **Switch** widget as well as the **SwitchPreference** component.
 
 Since the AppCompat v21 library now includes a **Switch** widget backport ([`SwitchCompat`](http://developer.android.com/reference/android/support/v7/widget/SwitchCompat.html)),
-another backport is no longer needed.  That is why the v2 of this library now **only includes the SwitchPreference backport**.
+another backport is no longer useful.  That is why the v2 of this library now **only includes the SwitchPreference backport**.
 
 This backport depends on the AppCompat library (the `SwitchPreference` embeds a `SwitchCompat`).
 
 ***If your app needs Switches only, you do not need this library anymore!  Please use the AppCompat's `SwitchCompat` instead***
 
 If your app needs SwitchPreferences however this library is for you! :)
+
+Please also note that the Maven artifact (`apklib`) is no longer supported with this release.
 
 
 How to use
@@ -47,30 +49,6 @@ dependencies {
 This is an Android library project, you have to add it as a dependency to your project (please
 see [this page](http://developer.android.com/guide/developing/projects/projects-eclipse.html#ReferencingLibraryProject)
 to know how to do that.)
-
-#### Option 3: Maven
-
-The apklib artifact is available at the **jcenter** repository. Declare the repository and the
-dependency in your `pom.xml` file:
-```xml
-<repository>
-    <id>central</id>
-    <name>bintray</name>
-    <url>http://jcenter.bintray.com</url>
-</repository>
-
- (...)
-
-<dependency>
-    <groupId>org.jraf</groupId>
-    <artifactId>android-switch-backport</artifactId>
-    <version>2.0.0</version>
-    <type>apklib</type>
-</dependency>
-```
-
-Note: the artifacts used to be hosted on the JRAF.org repository, but due to server problems,
-they are now hosted on jcenter. Please update your repository declarations!
 
 ### Using the SwitchPreference
 
