@@ -48,7 +48,7 @@ uploadArchives {
 
 android.libraryVariants.all { variant ->
     task("generate${variant.name.capitalize()}Javadoc", type: Javadoc) {
-        description "Generates Javadoc for $variant.name."
+        description "Generate Javadoc for $variant.name."
         source = variant.javaCompile.source
         ext.androidJar = "${android.sdkDirectory}/platforms/${android.compileSdkVersion}/android.jar"
         classpath = files(variant.javaCompile.classpath.files) + files(ext.androidJar)
@@ -77,9 +77,11 @@ android.libraryVariants.all { variant ->
 }
 
 // Use "gradle install" to deploy the aar to your local maven repository, as well as the javadoc and the source jars
-task install(dependsOn: ["assembleRelease", "uploadArchives", "jarReleaseSources", "jarReleaseJavadoc"]) << {
-    description "Make the library, generate a source jar, generate a javadoc jar, and copy everything to the local maven repository"
-
+//noinspection GroovyAssignabilityCheck
+task install(
+        group: "install",
+        description: "Make the library, generate a source jar, generate a javadoc jar, and copy everything to the local maven repository",
+        dependsOn: ["assembleRelease", "uploadArchives", "jarReleaseSources", "jarReleaseJavadoc"]) << {
     // Copy the sources jar
     println("Copying " + buildDir.getPath() + "/libs/library-${version}-sources.jar" + " to " + "${repositories.mavenLocal().getUrl()}/${groupPath}/${artifactId}/${version}" + "/${artifactId}-${version}-sources.jar")
     copy {
