@@ -1,0 +1,5 @@
+# Edit and save this file to a file named signing.properties.
+key-store=/home/scott/devkeys/android_release_key.keystore
+key-store-password=P4ssw0Rd
+key-alias=android_release_key
+key-alias-password=P4ssw0Rd

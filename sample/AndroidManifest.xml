@@ -22,9 +22,7 @@
      limitations under the License.
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.jraf.android.backport.switchwidget.sample"
-    android:versionCode="2"
-    android:versionName="2.0.0">
+    package="org.jraf.android.backport.switchwidget.sample">
 
     <application
         android:allowBackup="true"

@@ -13,3 +13,6 @@ allprojects {
         jcenter()
     }
 }
+
+ext.signingProperties = new Properties()
+signingProperties.load(new FileInputStream(file('signing.properties')))

@@ -1,19 +1,35 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion '21.1.2'
+    compileSdkVersion 22
+    buildToolsVersion '22.0.0'
 
     defaultConfig {
+        applicationId 'org.jraf.android.backport.switchwidget.sample'
+        versionCode 2
+        versionName '2.0.0'
         minSdkVersion 7
-        targetSdkVersion 21
+        targetSdkVersion 22
     }
+
+    signingConfigs {
+        release {
+            storeFile file(signingProperties['key-store'])
+            storePassword signingProperties['key-store-password']
+            keyAlias signingProperties['key-alias']
+            keyPassword signingProperties['key-alias-password']
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled true
+            shrinkResources true
             proguardFiles 'proguard-rules.txt', getDefaultProguardFile('proguard-android-optimize.txt')
+            signingConfig signingConfigs.release
         }
     }
+
     sourceSets {
         main {
             manifest.srcFile 'AndroidManifest.xml'
@@ -22,6 +38,8 @@ android {
             res.srcDirs = ['res']
         }
     }
+
+
 }
 
 dependencies {
