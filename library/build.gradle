@@ -4,7 +4,7 @@ apply plugin: 'maven'
 group = 'org.jraf'
 ext.groupPath = group.replace('.', '/')
 ext.artifactId = 'android-switch-backport'
-version = '2.0.0'
+version = '2.0.1'
 
 
 android {
@@ -77,11 +77,11 @@ android.libraryVariants.all { variant ->
 }
 
 // Use "gradle install" to deploy the aar to your local maven repository, as well as the javadoc and the source jars
-//noinspection GroovyAssignabilityCheck
+// noinspection GroovyAssignabilityCheck
 task install(
-        group: "install",
-        description: "Make the library, generate a source jar, generate a javadoc jar, and copy everything to the local maven repository",
-        dependsOn: ["assembleRelease", "uploadArchives", "jarReleaseSources", "jarReleaseJavadoc"]) << {
+        group: 'install',
+        description: 'Make the library, generate a source jar, generate a javadoc jar, and copy everything to the local maven repository',
+        dependsOn: ['assembleRelease', 'uploadArchives', 'jarReleaseSources', 'jarReleaseJavadoc']) << {
     // Copy the sources jar
     println("Copying " + buildDir.getPath() + "/libs/library-${version}-sources.jar" + " to " + "${repositories.mavenLocal().getUrl()}/${groupPath}/${artifactId}/${version}" + "/${artifactId}-${version}-sources.jar")
     copy {

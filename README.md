@@ -5,7 +5,7 @@ A backport of the [`SwitchPreference`](http://developer.android.com/reference/an
 
 This port works on Android 2.1+ (Eclair MR1 / level 7).
 
-The current version of this library is `2.0.0`.
+The current version of this library is `2.0.1`.
 
 IMPORTANT: UPDATE NOTICE
 ---
@@ -40,7 +40,7 @@ repositories {
  (...)
 
 dependencies {
-    compile 'org.jraf:android-switch-backport:2.0.0'
+    compile 'org.jraf:android-switch-backport:2.0.1'
 }
 ```
 
