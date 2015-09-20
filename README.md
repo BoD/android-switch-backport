@@ -7,20 +7,12 @@ This port works on Android 2.1+ (Eclair MR1 / level 7).
 
 The current version of this library is `2.0.1`.
 
-IMPORTANT: UPDATE NOTICE
+IMPORTANT: THIS LIBRARY IS NOW DEPRECATED
 ---
-The v1 of this library used to backport the **Switch** widget as well as the **SwitchPreference** component.
 
-Since the AppCompat v21 library now includes a **Switch** widget backport ([`SwitchCompat`](http://developer.android.com/reference/android/support/v7/widget/SwitchCompat.html)),
-another backport is no longer useful.  That is why the v2 of this library now **only includes the SwitchPreference backport**.
+Since the AppCompat library now includes a **Switch** widget backport ([`SwitchCompat`](http://developer.android.com/reference/android/support/v7/widget/SwitchCompat.html)), and a **SwitchPreference** widget backport ([`SwitchPreferenceCompat`](https://developer.android.com/reference/android/support/v7/preference/SwitchPreferenceCompat.html)), this library is no longer useful.
 
-This backport depends on the AppCompat library (the `SwitchPreference` embeds a `SwitchCompat`).
-
-***If your app needs Switches only, you do not need this library anymore!  Please use the AppCompat's `SwitchCompat` instead***
-
-If your app needs SwitchPreferences however this library is for you! :)
-
-Please also note that the Maven artifact (`apklib`) is no longer supported with this release.
+I was glad to work on this library and to see that it has been used in many projects.
 
 
 How to use
