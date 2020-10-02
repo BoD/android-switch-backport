@@ -3,7 +3,7 @@ Android Switch Preference Backport
 
 A backport of the [`SwitchPreference`](http://developer.android.com/reference/android/preference/SwitchPreference.html) component that was introduced on Android 4 (ICS / level 14).
 
-This port works on Android 2.1+ (Eclair MR1 / level 7).
+This port works on any Android 2.1+ (Eclair MR1 / level 7).
 
 The current version of this library is `2.0.1`.
 
@@ -28,7 +28,6 @@ dependency in your `build.gradle` file:
 repositories {
     jcenter()
 }
-
  (...)
 
 dependencies {
